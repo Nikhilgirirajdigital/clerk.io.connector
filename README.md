@@ -17,7 +17,7 @@ To generate the API key, below are steps you may follow:
 - Access API Keys Section and copy Public API key.
 - Configure API Key : Enter key in umbraco backoffice > Clerk.io > Clerk.io API Configuration as shown in below image:
 
- ![API Key Configuration](https://github.com/Nikhilgirirajdigital/clerk.io-connector/blob/main/Assets/API%20Key%20Configuration.png)
+ ![API Key Configuration](https://github.com/Nikhilgirirajdigital/clerk.io.connector/assets/124665688/c4519566-0b0a-49eb-b5e1-0300cbf19535)
 
 ## Feed Configuration
 
@@ -36,13 +36,13 @@ Choose the appropriate Document Type that represent the product,category and con
 
 Ensure that all configurations are saved, securing the settings for seamless integration. 
 
-![Feed Configuration](https://github.com/Nikhilgirirajdigital/clerk.io-connector/assets/124665688/8146fc63-638e-4349-87eb-49b426dd9e31)
+![Feed Configuration](https://github.com/Nikhilgirirajdigital/clerk.io.connector/assets/124665688/48cee990-7ea9-4efc-9ee1-926bcd22eff6)
 
 ## Audit Data Tracking
 
 Admin users can effortlessly monitor the data shared with Clerk.io through the package's intuitive interface. The system provides detailed logs, including timestamps and specific paths, ensuring transparency and accountability in the data-sharing process. Any errors encountered during the exchange are highlighted, allowing for quick resolution. 
 
-![Feed Logs](https://github.com/Nikhilgirirajdigital/clerk.io-connector/assets/124665688/97e19e9c-6aad-458b-8229-b0b8fe98a186)
+![Feed Logs](https://github.com/Nikhilgirirajdigital/clerk.io.connector/assets/124665688/bc6b15c3-77b1-4d78-a1de-6a2ec60ace34)
 
 # Clerk.io Data Sync Settings
 
@@ -59,7 +59,7 @@ To ensure seamless data synchronization between your Umbraco system and Clerk.io
 	- JSON Customers URL - {your site url}/clerk/customers.json
 	- JSON Pages URL - {your site url}/clerk/pages.json
 
-![Clerk io Portal Feed Configuration](https://github.com/Nikhilgirirajdigital/clerk.io-connector/assets/124665688/cd241443-e7cd-4ee5-8221-74c80cc8026e)
+![Clerk io Portal Feed Configuration](https://github.com/Nikhilgirirajdigital/clerk.io.connector/assets/124665688/5fb59b50-8b4c-4846-82b2-f287c84ca5fc)
 
 # Reference Links
 
