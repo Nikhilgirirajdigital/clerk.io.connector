@@ -1,0 +1,319 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+<form id="ConfigurationForm" name="ConfigurationForm" class="css-form ConfigurationForm" novalidate="" ng-controller="ClerkSettingsController" ng-init="Init()">
+    <div class="umb-panel umb-editor-wrapper ng-scope clerk-dashboard">
+        <div data-element="editor-header" class="umb-editor-header umb-header-responsive">
+            <div class="flex items-center" style="height: 100%;" aria-hidden="false">
+                <div class="flex items-center" style="flex: 1;">
+                    <div class="ng-scope">
+                        <ul class="umb-sub-views-nav ng-isolate-scope">
+                            <li class="ng-scope">
+                                <a class="umb-sub-views-nav-item__action umb-outline umb-outline--thin umb-sub-views-nav-item--iconleft">
+                                    <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                        <span class="umb-icon__inner icon-settings">
+                                            <span class="ng-binding ng-scope">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256">
+                                                    <g fill="none" fill-rule="nonzero" stroke="#030303" stroke-width="10.66667" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M17.02515,238.97485v-221.94971h221.94971v221.94971z" id="shape"></path></g>
+                                                    <g fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M10.625,3l-2.45312,9.49414l-0.41016,-1.49414h-5.76172v2h4.23828l1.09961,4h1.73633l2.17578,-8.41992l1.90234,11.41992h1.75586l1.5,-7h5.5918v-2h-7.20898l-0.625,2.91406l-1.81836,-10.91406z"></path></g></g>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="umb-editor-header__name-and-description" style="flex: 1 1 auto;">
+                        <h1 class="umb-panel-header-name ng-binding ng-scope">Clerk.IO Connector</h1>
+                        <p>Let's Personalize your E-Commerce Platform with clerk.io</p>
+                    </div>
+                    <div class="ng-scope">
+                        <ul class="umb-sub-views-nav ng-isolate-scope umb-sub-views-nav--right">
+                            <li class="ng-scope">
+                                <a href="#/ClerkIoConnector" class="umb-sub-views-nav-item__action umb-outline umb-outline--thin umb-sub-views-nav-item--dashboard">
+                                    <span class="umb-sub-views-nav-item-text ng-binding">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="ng-scope">
+                                <a href="#/ClerkIoConnector/clerkDashboardTree/clerkSettings" class="umb-sub-views-nav-item__action umb-outline umb-outline--thin is-active">
+                                    <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                        <span class="umb-icon__inner icon-settings">
+                                            <span class="ng-binding ng-scope">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path d="M469.92 279.717v-48.898l-6.906-2.256-52.35-17.091-13.971-33.728 26.852-56.814-34.586-34.581-6.477 3.288-49.1 24.937-33.721-13.971-21.198-59.171h-48.899l-2.253 6.912-17.091 52.352-33.712 13.966-56.833-26.849-34.573 34.58 3.287 6.474 24.933 49.116-13.96 33.707-59.182 21.189v48.909l6.914 2.253 52.352 17.094 13.966 33.718-26.845 56.82 34.567 34.587 6.484-3.294 49.103-24.931 33.719 13.968 21.188 59.165h48.902l2.26-6.908 17.094-52.35 33.721-13.967 56.818 26.855 34.584-34.59-3.286-6.48-24.937-49.094 13.969-33.726 59.167-21.191zM255.054 324.78c-37.819 0-68.478-30.657-68.478-68.479 0-37.819 30.659-68.481 68.478-68.481 37.819 0 68.475 30.662 68.475 68.481 0 37.822-30.656 68.479-68.475 68.479z"></path>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="umb-editor-container umb-panel-body umb-scrollable row-fluid">
+            <div class="umb-dialog umb-pane umb-editor-header-space">
+                <div class="umbraco-commerce">
+                    <ul class="umb-load-indicator animated -half-second" ng-if="Load">
+                        <li class="umb-load-indicator__bubble"></li>
+                        <li class="umb-load-indicator__bubble"></li>
+                        <li class="umb-load-indicator__bubble"></li>
+                    </ul>
+                    <div class="umb-group-panel api-config">
+                        <div class="p-20">
+                            <div class="section-header">
+                                <h4>Clerk.io API Configuration</h4>
+                            </div>
+                            <div class="field-wrapper field-primary">
+                                <div class="field-info">
+                                    <label>Api Key</label>
+                                    <small>The Api key for connecting with your Clerk.io account.</small>
+                                    <a href="https://help.clerk.io/help/settings/finding-a-stores-public-and-private-api-keys/" target="_blank">Get your API key here.</a>
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="ApiKey" ng-model="Configuration.apiKeyConfiguration.apiKey" />
+                                    <input type="hidden" name="TokenVerificationUrl" ng-model="Configuration.apiKeyConfiguration.tokenVerificationUrl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-group" id="accordion">
+                        <!-- First Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true">Product Information <span>Let's configure product section to clerk.io</span></h4>
+                            </div>
+
+                            <div id="collapseOne" class="panel-collapse collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <div class="umb-group-panel category-new-config">
+                                        <div>
+                                            <div class="config-section">
+                                                <div style="display:block; border-bottom: 1px solid #d3d3d3;">
+                                                    <div class="field-wrapper field-primary">
+                                                        <div class="field-info">
+                                                            <label>Document Type <span>*</span></label>
+                                                            <small>Select your category page document type here</small>
+                                                        </div>
+                                                        <div class="field">
+                                                            <select class="input-block-level" name="ProductDocumentType" ng-model="Configuration.productConfiguration.documentType"
+                                                                    ng-change="LoadProductDocumentTypeFields(this)" required
+                                                                    ng-class="{ 'text-success-border': ConfigurationForm.ProductDocumentType.$valid && Configuration.productConfiguration.documentType!='', 'text-danger-border': (ConfigurationForm.$submitted || ConfigurationForm.ProductDocumentType.$touched) && (ConfigurationForm.$error.required  || Configuration.productConfiguration.documentType=='') }">
+                                                                <option value="" selected>Please select</option>
+                                                                <option ng-repeat="documentType in DocumentTypes" value="{{documentType.alias}}">{{documentType.text}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:block;">
+                                                    <div class="field-wrapper">
+                                                        <div class="field-info" style="width: 100%">
+                                                            <h4>
+                                                                Page Fields
+                                                                <span style="margin-left: 30px;font-size: 12px;color: #c3c3c3;font-weight: 100;">Let's configure category page properties with clerk.io. Please refer clerk documentation for more reference - <u> <a target="_blank" href="https://docs.clerk.io/docs/data-feed#products">Product Data feed properties</a></u></span>
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:block; ">
+                                                    <div class="field-wrapper">
+                                                        <div class="field-info">
+                                                            <label>Clerk.io property </label>
+                                                        </div>
+                                                        <div class="field">
+                                                            <label>Umbraco property </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field-wrapper" ng-repeat="item in Configuration.productConfiguration.dictionary">
+                                                        <div class="field-info">
+                                                            <input type="text" placeholder="Clerk.io property alias" ng-model="item.key" />
+                                                        </div>
+                                                        <div class="field">
+                                                            <select ng-model="item.value">
+                                                                <option value="" selected>Please select</option>
+                                                                <option ng-repeat="property in ProductDocumentTypeFields" value="{{property.alias}}">{{property.text}}</option>
+                                                            </select>
+                                                        </div>
+                                                        <a style="height: 20px; position: absolute; color: #162335;" title="Remove" ng-click="removeFromProduct($index)">
+                                                            <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                                                <span class="umb-icon__inner icon-settings">
+                                                                    <span class="ng-binding ng-scope">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M122.844 475.519h263.145V195.703H122.844v279.816zm181.281-223.79c0-8.498 6.891-15.386 15.395-15.386 8.494 0 15.385 6.888 15.385 15.386v162.128c0 8.496-6.891 15.394-15.385 15.394-8.504 0-15.395-6.897-15.395-15.394V251.729zm-65.101.003c0-8.496 6.892-15.392 15.39-15.392 8.496 0 15.392 6.896 15.392 15.392v162.125c0 8.496-6.896 15.391-15.392 15.391-8.498 0-15.39-6.895-15.39-15.391V251.732zm-65.098 0c0-8.501 6.895-15.392 15.389-15.392 8.498 0 15.391 6.891 15.391 15.392v162.127c0 8.498-6.893 15.389-15.391 15.389-8.494 0-15.389-6.891-15.389-15.389V251.732zM399.02 90.23h-57.209v-9.36c-.004-24.942-20.209-45.145-45.148-45.152h-84.498c-24.941.007-45.145 20.209-45.153 45.152v9.36h-57.2c-11.744 0-21.273 9.526-21.273 21.275v56.348h331.756v-56.348c-.002-11.748-9.527-21.275-21.275-21.275zm-87.989 0H197.785l-.004-9.36c.023-7.938 6.445-14.359 14.383-14.372h84.498c7.929.013 14.359 6.433 14.369 14.372v9.36z"></path></svg>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="field-wrapper">
+                                                        <button class="btn btn-action" title="Add" ng-click="addFromProduct()">
+                                                            Add
+                                                        </button>                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">Category Information <span>Let's configure category page properties to clerk.io</span></h4>
+                            </div>
+
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="umb-group-panel category-new-config">
+                                        <div>
+                                            <div class="config-section">
+                                                <div style="display:block; border-bottom: 1px solid #d3d3d3;">
+                                                    <div class="field-wrapper field-primary">
+                                                        <div class="field-info">
+                                                            <label>Document Type <span>*</span></label>
+                                                            <small>Select your category page document type here</small>
+                                                        </div>
+                                                        <div class="field">
+                                                            <select class="input-block-level" name="CategoriesDocumentType" ng-model="Configuration.categoriesConfiguration.documentType"
+                                                                    ng-change="LoadCategoryDocumentTypeFields(this)" required
+                                                                    ng-class="{ 'text-success-border': ConfigurationForm.CategoriesDocumentType.$valid && Configuration.categoriesConfiguration.documentType!='', 'text-danger-border': (ConfigurationForm.$submitted || ConfigurationForm.CategoriesDocumentType.$touched) && (ConfigurationForm.$error.required  || Configuration.categoriesConfiguration.documentType=='') }">
+                                                                <option value="" selected>Please select</option>
+                                                                <option ng-repeat="documentType in DocumentTypes" value="{{documentType.alias}}">{{documentType.text}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:block;">
+                                                    <div class="field-wrapper">
+                                                        <div class="field-info" style="width: 100%">
+                                                            <h4>
+                                                                Page Fields
+                                                                <span style="margin-left: 30px;font-size: 12px;color: #c3c3c3;font-weight: 100;">Let's configure category page properties with clerk.io. Please refer clerk documentation for more reference - <u> <a target="_blank" href="https://docs.clerk.io/docs/data-feed#categories">Categories Data feed properties</a></u></span>
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:block; ">
+                                                    <div class="field-wrapper">
+                                                        <div class="field-info">
+                                                            <label>Clerk.io property </label>
+                                                        </div>
+                                                        <div class="field">
+                                                            <label>Umbraco property </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field-wrapper" ng-repeat="item in Configuration.categoriesConfiguration.dictionary">
+                                                        <div class="field-info">
+                                                            <input type="text" placeholder="Clerk.io property alias" ng-model="item.key" />
+                                                        </div>
+                                                        <div class="field">
+                                                            <select ng-model="item.value">
+                                                                <option value="" selected>Please select</option>
+                                                                <option ng-repeat="property in CategoryDocumentTypeFields" value="{{property.alias}}">{{property.text}}</option>
+                                                            </select>
+                                                        </div>
+                                                        <a style="height: 32px; position: absolute; color: #162335;" title="Remove" ng-click="removeFromCategory($index)">
+                                                            <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                                                <span class="umb-icon__inner icon-settings">
+                                                                    <span class="ng-binding ng-scope">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M122.844 475.519h263.145V195.703H122.844v279.816zm181.281-223.79c0-8.498 6.891-15.386 15.395-15.386 8.494 0 15.385 6.888 15.385 15.386v162.128c0 8.496-6.891 15.394-15.385 15.394-8.504 0-15.395-6.897-15.395-15.394V251.729zm-65.101.003c0-8.496 6.892-15.392 15.39-15.392 8.496 0 15.392 6.896 15.392 15.392v162.125c0 8.496-6.896 15.391-15.392 15.391-8.498 0-15.39-6.895-15.39-15.391V251.732zm-65.098 0c0-8.501 6.895-15.392 15.389-15.392 8.498 0 15.391 6.891 15.391 15.392v162.127c0 8.498-6.893 15.389-15.391 15.389-8.494 0-15.389-6.891-15.389-15.389V251.732zM399.02 90.23h-57.209v-9.36c-.004-24.942-20.209-45.145-45.148-45.152h-84.498c-24.941.007-45.145 20.209-45.153 45.152v9.36h-57.2c-11.744 0-21.273 9.526-21.273 21.275v56.348h331.756v-56.348c-.002-11.748-9.527-21.275-21.275-21.275zm-87.989 0H197.785l-.004-9.36c.023-7.938 6.445-14.359 14.383-14.372h84.498c7.929.013 14.359 6.433 14.369 14.372v9.36z"></path></svg>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="field-wrapper">
+                                                        <button class="btn btn-action" title="Add" ng-click="addFromCategory()">
+                                                            Add
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third Panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree">Page Information <span>Let's configure all content pages properties to clerk.io</span></h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="umb-group-panel category-new-config">
+                                        <div>
+                                            <div class="config-section">
+                                                <div style="display:block;">
+                                                    <div class="field-wrapper">
+                                                        <div class="field-info" style="width: 100%">
+                                                            <h4>
+                                                                Page Fields
+                                                                <span style="margin-left: 30px;font-size: 12px;color: #c3c3c3;font-weight: 100;">Let's configure pages page properties with clerk.io. Please refer clerk documentation for more reference - <u> <a target="_blank" href="https://docs.clerk.io/docs/data-feed#pages">Pages Data feed properties</a></u></span>
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:block;">
+                                                    <div class="field-wrapper">
+                                                        <div class="field-info">
+                                                            <label>Clerk.io property </label>
+                                                        </div>
+                                                        <div class="field">
+                                                            <label>Umbraco property </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field-wrapper" ng-repeat="item in Configuration.pagesConfiguration.dictionary">
+                                                        <div class="field-info">
+                                                            <input type="text" placeholder="Clerk.io property alias" ng-model="item.key" />
+                                                        </div>
+                                                        <div class="field">
+                                                            <input type="text" placeholder="Umbraco property alias" ng-model="item.value" />
+                                                        </div>
+                                                        <a style="height: 32px; position: absolute; color: #162335;" title="Remove" ng-click="removeFromPage($index)">
+                                                            <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                                                <span class="umb-icon__inner icon-settings">
+                                                                    <span class="ng-binding ng-scope">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M122.844 475.519h263.145V195.703H122.844v279.816zm181.281-223.79c0-8.498 6.891-15.386 15.395-15.386 8.494 0 15.385 6.888 15.385 15.386v162.128c0 8.496-6.891 15.394-15.385 15.394-8.504 0-15.395-6.897-15.395-15.394V251.729zm-65.101.003c0-8.496 6.892-15.392 15.39-15.392 8.496 0 15.392 6.896 15.392 15.392v162.125c0 8.496-6.896 15.391-15.392 15.391-8.498 0-15.39-6.895-15.39-15.391V251.732zm-65.098 0c0-8.501 6.895-15.392 15.389-15.392 8.498 0 15.391 6.891 15.391 15.392v162.127c0 8.498-6.893 15.389-15.391 15.389-8.494 0-15.389-6.891-15.389-15.389V251.732zM399.02 90.23h-57.209v-9.36c-.004-24.942-20.209-45.145-45.148-45.152h-84.498c-24.941.007-45.145 20.209-45.153 45.152v9.36h-57.2c-11.744 0-21.273 9.526-21.273 21.275v56.348h331.756v-56.348c-.002-11.748-9.527-21.275-21.275-21.275zm-87.989 0H197.785l-.004-9.36c.023-7.938 6.445-14.359 14.383-14.372h84.498c7.929.013 14.359 6.433 14.369 14.372v9.36z"></path></svg>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="field-wrapper">
+                                                        <button class="btn btn-action" title="Add" ng-click="addFromPage()">
+                                                            Add
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="umb-group-panel" style="min-height:50px;">
+                        <button type="submit" class="btn umb-button__button btn-action umb-button-- umb-outline" style="right: 15px;position: absolute; margin-top: 8px;" ng-click="SaveConfiguration(ConfigurationForm)"><span class="umb-button__content ng-binding"> Save </span></button>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+
+        <div class="editor-footer umb-editor-footer clerk-settings">
+            <div class="umb-editor-footer-content__right-side">
+                <button type="submit" class="btn umb-button__button btn-action umb-button-- umb-outline" ng-click="SaveConfiguration(ConfigurationForm)"><span class="umb-button__content ng-binding"> Save Configuration </span></button>
+            </div>
+        </div>
+    </div>
+</form>

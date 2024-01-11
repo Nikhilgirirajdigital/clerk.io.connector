@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <APIKeyConfiguration>
+    <ApiKey></ApiKey>
+    <TokenVerificationUrl>https://api.clerk.io/v2/token/verify</TokenVerificationUrl>
+  </APIKeyConfiguration>
+  <ProductConfiguration>
+    <DocumentType></DocumentType>
+  </ProductConfiguration>
+  <CategoriesConfiguration>
+    <DocumentType></DocumentType>
+  </CategoriesConfiguration>
+  <PagesConfiguration>
+    <Dictionary Key="image" value="image" />
+    <Dictionary Key="text" value="metaDescription" />
+  </PagesConfiguration>
+</Configuration>

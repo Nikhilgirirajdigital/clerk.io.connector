@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+	<area alias="ClerkIoConnector">
+		<key alias="ClerkIoConnector">Clerk.io</key>
+	</area>
+  <area alias="treeHeaders">
+    <key alias="clerkIOGroupConnector">Clerk.io Connector</key>
+  </area>
+</language>

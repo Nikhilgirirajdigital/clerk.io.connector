@@ -1,0 +1,24 @@
+{
+  "sections": [
+    {
+      "alias": "ClerkIoConnector",
+      "name": "Clerk.io"
+    }
+  ],
+  "dashboards": [
+    {
+      "alias": "ClerkIoConnector",
+      "view": "/App_Plugins/ClerkIoConnector/views/clerkDashboard.html",
+      "sections": [ "ClerkIoConnector" ],
+      "weight": -10
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/ClerkIoConnector/js/clerkDashboardController.js",
+    "~/App_Plugins/ClerkIoConnector/js/clerkFeedLogsController.js",
+    "~/App_Plugins/ClerkIoConnector/js/clerkSettingsController.js"
+  ],
+  "css": [
+    "~/App_Plugins/ClerkIoConnector/css/clerkDashboard.css"
+  ]
+}

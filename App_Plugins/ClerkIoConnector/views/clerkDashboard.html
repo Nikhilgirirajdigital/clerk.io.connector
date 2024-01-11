@@ -1,0 +1,111 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="umb-panel umb-editor-wrapper ng-scope clerk-dashboard">
+    <div data-element="editor-header" class="umb-editor-header umb-header-responsive">
+        <div class="flex items-center" style="height: 100%;" aria-hidden="false">
+            <div class="flex items-center" style="flex: 1;">
+                <div class="ng-scope">
+                    <ul class="umb-sub-views-nav ng-isolate-scope">
+                        <li class="ng-scope">
+                            <a class="umb-sub-views-nav-item__action umb-outline umb-outline--thin umb-sub-views-nav-item--iconleft">
+                                <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                    <span class="umb-icon__inner icon-settings">
+                                        <span class="ng-binding ng-scope">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256">
+                                                <g fill="none" fill-rule="nonzero" stroke="#030303" stroke-width="10.66667" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M17.02515,238.97485v-221.94971h221.94971v221.94971z" id="shape"></path></g>
+                                                <g fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M10.625,3l-2.45312,9.49414l-0.41016,-1.49414h-5.76172v2h4.23828l1.09961,4h1.73633l2.17578,-8.41992l1.90234,11.41992h1.75586l1.5,-7h5.5918v-2h-7.20898l-0.625,2.91406l-1.81836,-10.91406z"></path></g></g>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="umb-editor-header__name-and-description" style="flex: 1 1 auto;">
+                    <h1 class="umb-panel-header-name ng-binding ng-scope">Clerk.IO Connector</h1>
+                    <p>Let's Personalize your E-Commerce Platform with clerk.io</p>
+                </div>
+                <div class="ng-scope">
+                    <ul class="umb-sub-views-nav ng-isolate-scope umb-sub-views-nav--right">
+                        <li class="ng-scope">
+                            <a href="#/ClerkIoConnector" class="umb-sub-views-nav-item__action umb-outline umb-outline--thin is-active umb-sub-views-nav-item--dashboard">
+                                <span class="umb-sub-views-nav-item-text ng-binding">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="ng-scope">
+                            <a href="#/ClerkIoConnector/clerkDashboardTree/clerkSettings" class="umb-sub-views-nav-item__action umb-outline umb-outline--thin">
+                                <span aria-hidden="true" class="umb-iconpicker-svg large umb-icon ng-isolate-scope" icon="icon-settings">
+                                    <span class="umb-icon__inner icon-settings">
+                                        <span class="ng-binding ng-scope">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M469.92 279.717v-48.898l-6.906-2.256-52.35-17.091-13.971-33.728 26.852-56.814-34.586-34.581-6.477 3.288-49.1 24.937-33.721-13.971-21.198-59.171h-48.899l-2.253 6.912-17.091 52.352-33.712 13.966-56.833-26.849-34.573 34.58 3.287 6.474 24.933 49.116-13.96 33.707-59.182 21.189v48.909l6.914 2.253 52.352 17.094 13.966 33.718-26.845 56.82 34.567 34.587 6.484-3.294 49.103-24.931 33.719 13.968 21.188 59.165h48.902l2.26-6.908 17.094-52.35 33.721-13.967 56.818 26.855 34.584-34.59-3.286-6.48-24.937-49.094 13.969-33.726 59.167-21.191zM255.054 324.78c-37.819 0-68.478-30.657-68.478-68.479 0-37.819 30.659-68.481 68.478-68.481 37.819 0 68.475 30.662 68.475 68.481 0 37.822-30.656 68.479-68.475 68.479z"></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="umb-editor-container umb-panel-body umb-scrollable row-fluid clerk-dashboard">
+    <div class="umb-dialog umb-pane umb-editor-header-space" ng-controller="ClerkDashboardController" ng-init="Init()">
+        <div class="umb-editors" ng-if="model.show">
+            <div class="umb-editor   umb-editor--large umb-editor--infiniteMode umb-editor--n1 umb-editor--level1">
+                <form id="PromoCodeForm" name="PromoCodeForm" class="css-form" novalidate>
+                </form>
+            </div>
+        </div>
+        <div class="umbraco-commerce">
+            <div class="umb-group-panel recent-logs">
+                <div class="p-20">
+                    <div class="section-header">
+                        <h4 class="semi-bold mt-0">Recent Update</h4>
+                    </div>
+                    <div style="text-align: center;font-weight: bold;" class="field-wrapper field-primary" ng-if="Logs == 0">
+                        <label>
+                            No logs are found.
+                        </label>
+                    </div>
+                    <div class="field-wrapper field-primary" ng-repeat="log in Logs">
+                        <div ng-click="log.open = !log.open">
+                            <label class="mb-0">
+                                <div ng-if="log.logLevel == 'Error'" class="umb-badge umb-badge--danger umb-badge--s" color="danger">
+                                    {{log.logLevel}}
+                                </div>
+                                <div ng-if="log.logLevel == 'Information'" class="umb-badge umb-badge--success umb-badge--s" color="success">
+                                    {{log.logLevel}}
+                                </div>
+                                {{ log.date | date:"MMM dd, yyyy hh:mm:ss a" }} {{log.message}}
+                            </label>
+                        </div>
+                        <div ng-if="log.open" style="margin-top: 10px;">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th style="width:38.5ch">Timestamp</th>
+                                        <td class="ng-binding">{{ log.date }}</td>
+                                    </tr>
+                                    <tr ng-repeat="(key, val) in log.properties" class="ng-scope">
+                                        <th ng-if="key == 'RequestPath' || key == 'MachineName'" class="ng-binding">{{key}}</th>
+                                        <td ng-if="key == 'RequestPath' || key == 'MachineName'">
+                                            <span class="ng-binding ng-scope">{{val}}</span>
+                                        </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="#/ClerkIoConnector/clerkDashboardTree/clerkFeedLogs" class="btn umb-button__button btn-action umb-button-- umb-outline">View All Logs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
